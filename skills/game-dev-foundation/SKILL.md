@@ -69,6 +69,8 @@ For the full production pipeline, read `references/ai-2d-art-asset-pipeline.md`.
 
 For sprite animation generated from a single 2D sprite or keyframes, prefer the sprite-to-video-to-frames workflow in `references/sprite-to-video-animation-pipeline.md`.
 
+Use `scripts/sprite_video_pipeline.py` to scaffold and validate a node-by-node sprite animation task directory before producing or importing assets.
+
 ## Implementation Rules
 
 - Keep core systems headless when practical: combat, simulation, AI, config validation, and data transforms should run without scene presentation.

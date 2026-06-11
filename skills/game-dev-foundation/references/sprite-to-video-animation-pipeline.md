@@ -22,6 +22,29 @@ approved 2D sprite
 
 Do not treat the AI video as the final animation. Treat it as a motion source.
 
+## Helper Script
+
+Use the bundled helper to scaffold and validate the pipeline structure before production:
+
+```powershell
+python skills/game-dev-foundation/scripts/sprite_video_pipeline.py init `
+  --output C:\tmp\sprite_pipeline_smoke `
+  --asset-id test_runner `
+  --animation run_right `
+  --model Kling `
+  --control-mode start-end `
+  --background green-screen `
+  --size 128x128 `
+  --fps 10 `
+  --frames 8 `
+  --engine Godot
+
+python skills/game-dev-foundation/scripts/sprite_video_pipeline.py validate `
+  --task C:\tmp\sprite_pipeline_smoke
+```
+
+The script only handles deterministic production structure and validation. It does not call image/video models. Model execution remains a user-confirmed checkpoint.
+
 ## Why This Is Preferred
 
 Direct AI spritesheet generation often fails in game production:
