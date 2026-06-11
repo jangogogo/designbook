@@ -1,6 +1,6 @@
 ---
 name: game-dev-foundation
-description: Game development foundation for Codex. Use when planning, reviewing, creating, or modifying game projects, especially Godot 4 C# prototypes, data-driven gameplay systems, game design documents, validation plans, runtime editors, AI behavior, combat, Buff/skill systems, AI-assisted 2D game art asset pipelines, or Codex migration memory for game development.
+description: Game development foundation for Codex. Use when planning, reviewing, creating, or modifying game projects, especially Godot 4 C# prototypes, data-driven gameplay systems, game design documents, validation plans, runtime editors, AI behavior, combat, Buff/skill systems, AI-assisted 2D game art asset pipelines, sprite-to-video-to-frames animation workflows, or Codex migration memory for game development.
 ---
 
 # Game Dev Foundation
@@ -67,6 +67,8 @@ When building or reviewing AI-assisted 2D art production:
 
 For the full production pipeline, read `references/ai-2d-art-asset-pipeline.md`.
 
+For sprite animation generated from a single 2D sprite or keyframes, prefer the sprite-to-video-to-frames workflow in `references/sprite-to-video-animation-pipeline.md`.
+
 ## Implementation Rules
 
 - Keep core systems headless when practical: combat, simulation, AI, config validation, and data transforms should run without scene presentation.
@@ -95,6 +97,7 @@ Before calling a change done, prefer at least one:
 - tiny playthrough checklist
 - screenshot/browser verification for UI
 - in-engine asset contact sheet, animation preview, and gameplay-scale screenshot for art changes
+- model-choice checkpoint and node-by-node acceptance notes for AI animation pipelines
 
 For gameplay feel changes, include a testable claim such as:
 

@@ -1,4 +1,3 @@
 display_name: Game Dev Foundation
-short_description: Game architecture and validation defaults
-default_prompt: Use this skill to plan, review, or implement a data-driven game project with clear architecture, validation, and iteration gates.
-
+short_description: Game architecture, validation, and AI 2D asset pipelines
+default_prompt: Use this skill to plan, review, or implement a data-driven game project with clear architecture, validation gates, and AI-assisted 2D art or sprite animation workflows.
