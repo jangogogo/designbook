@@ -1,6 +1,6 @@
 ---
 name: game-dev-foundation
-description: Game development foundation for Codex. Use when planning, reviewing, creating, or modifying game projects, especially Godot 4 C# prototypes, data-driven gameplay systems, game design documents, validation plans, runtime editors, AI behavior, combat, Buff/skill systems, or Codex migration memory for game development.
+description: Game development foundation for Codex. Use when planning, reviewing, creating, or modifying game projects, especially Godot 4 C# prototypes, data-driven gameplay systems, game design documents, validation plans, runtime editors, AI behavior, combat, Buff/skill systems, AI-assisted 2D game art asset pipelines, or Codex migration memory for game development.
 ---
 
 # Game Dev Foundation
@@ -52,6 +52,21 @@ When handling design, concept, or proposal work:
 
 For ParanoiaSkills-derived design workflow principles, read `references/paranoia-design-production-principles.md`.
 
+## AI 2D Art Asset Pipeline
+
+When building or reviewing AI-assisted 2D art production:
+
+- Treat AI output as raw material, not final game assets.
+- Start every asset family with an asset contract: gameplay role, silhouette, camera scale, pixel density, palette, animation list, export size, collision needs, and engine import settings.
+- Use a stable visual bible before bulk generation: camera angle, line weight, material language, palette, shadow direction, exaggeration rules, forbidden details, and UI readability rules.
+- Keep source, working, export, and engine-import folders separate.
+- Prefer transparent PNG frame sequences for characters, enemies, props, VFX, and icons; use atlases/spritesheets only after frame QA passes.
+- Lock one canonical scale per category: character, enemy, projectile, pickup, tile, VFX, icon, portrait, UI panel, background layer.
+- Validate assets in-engine before producing variants. A beautiful isolated image is not done until it reads at gameplay zoom.
+- Preserve prompt, seed, model/tool name, date, source refs, edits, and license notes in metadata or sidecar files.
+
+For the full production pipeline, read `references/ai-2d-art-asset-pipeline.md`.
+
 ## Implementation Rules
 
 - Keep core systems headless when practical: combat, simulation, AI, config validation, and data transforms should run without scene presentation.
@@ -79,6 +94,7 @@ Before calling a change done, prefer at least one:
 - config validator
 - tiny playthrough checklist
 - screenshot/browser verification for UI
+- in-engine asset contact sheet, animation preview, and gameplay-scale screenshot for art changes
 
 For gameplay feel changes, include a testable claim such as:
 
@@ -95,4 +111,3 @@ When reporting back:
 - Say what was changed, where, and how it was verified.
 - Mention unresolved assumptions and next validation step.
 - Keep project-specific detail in docs or references instead of overloading chat.
-
